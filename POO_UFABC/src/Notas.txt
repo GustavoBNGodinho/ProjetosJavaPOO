@@ -1,0 +1,237 @@
+História da linguagem Java
+ -> Proposta por Hames Gosling e equipe, em 1991, na Sun Micorssytems;
+ -> Empresa adquirida pela Oracle em 2010;
+ -> Primeira versão: 1995;
+ Característica do projeto:
+ -> Forte orientação a objeto
+ -> Segurança
+ -> Portabilidade -> linguagem forte que mesmo assim era portável para várias plataformas.
+ Fatores de crescimento:
+ -> Décadas de 1990 e 2000: internet e Web (server-side e client-side);
+ -> Décadas de 2000 e 2010: computação móvel: Java ME e plataforma Android
+ Cenário atual:
+ -> Amplamente usada em sistemas corporativas, de negócios e em infra-estrutura de TI
+ -> Ecossistemas vasto de desenvolvimento (IDEs, Frameworks, bibliotecas)
+ -> Cominidade grande, uma das linguagens mais usadas no mundo
+
+ Java Virtual Machine (JVM): responsável por executar o código-objeto gerado pelo compilador Java.
+ -> é aqui que roda, então vc não precisa se preocupar em qual sistema operácional vai rodar, por isso tem uma ótima portabilidade.
+ -> Gerencia a memória, carrega classes, verifica segurança, etc.
+ -> Componoente fundamental para a portabilidade do Java
+ -> Deve estar presente no sistema operacional do usuário
+
+ Java Runtime Environment (JRE): Contem a JVM e as bibliotecas padrão
+
+ .jar -> como se fosse um arquivo zip com um monde de classes dentro.
+
+ java -cp app.jar App
+
+ Coletor de lixo java:
+ -> desaloca memória de objetos ociosos para liberar memória.
+
+
+ CLASSES E CLASSES:
+    -> Um objeto é uma representação auto-contida que representa um conceito por meio do
+       encapsulamento de ddos (propriedades) e comportamentos associados e esses dados (métodos);
+        * Propriedades: Dados que caracterizam um objeto;
+        * Métodos: Operações que pode ser realizada sobre um objeto (funções que realizam uma terefa no objeto);
+            * Em geral, operam sobre as propriedades;
+            * Mas podem também operar sobre outros objetos;
+            * Objetos se comunicam com o "mundo esterior" por meio dos métodos;
+
+    -> Classe:
+        * Uma classe define um tipo de dados com vase em um conjunto de propriedade e um conjunto de métodos.
+        * Uma classe pode permitir a criação de multipos objetos que terão as mesmas propriedades e métodos da classe;
+        * Classes são "formas" para objetos (instâncias);
+        * O objeto sabe qual é a classe dele mas a classe não sabe quais são seus objetos (instâncias);
+        * construtor tem que ter o mesmo nome da classe;
+        * O compilador começa a ler a classe de um objeto como um novo tipo
+
+
+    -> Baseadas em classes. Objetos são instâncias de classes.
+        * Maioria da linguagens OO;
+        * Exemplos: Java, C++, C#, Python;
+        * Primeiramente cria-se classes;
+        * Classes são definidas criam-se objetos;
+
+    -> Baseadas em protótipos: Objetos são instâncias de protótipos.
+        * Exemplos: JavaScript, Io, Self, Lua;
+        * Objetos podem ser criados diretamente (são estruturas de dados);
+        * Objetos podem ser modificados dinamcamente em tempo de execução;
+        * Objetos podem ser cirados a partir de outro objetos (protótipos);
+
+    -> Tipo abstrado de dado (TAD).
+        * modelo matemático que descreve:
+            & Um comjunto de valores (domínio);
+            & Um conjunto de oprações sobre esses valores (interface);
+            & Modelo independente de paradigma de programção;
+            & TADs são abstrações conceituais, independentes;
+            & Resumindo é uma forma de gerir projetos;
+            & Projeto conceitual -> Projeto lógico -> Projeto físico;
+
+this -> alto referência;
+. -> acesso a varáveis públicas de uma instância;
+
+
+Modelo de momória de objetos:
+    -> class main {
+        public static void maind(String[] args) {
+            Atividades.ContaCorrente.ContaCorrente conta1; //aqui o endereço de memória está alocado como "null"
+            Atividades.ContaCorrente.ContaCorrente conta2; //aqui também
+
+            conta1 = new Atividades.ContaCorrente.ContaCorrente(...);
+            conta2 = new Atividades.ContaCorrente.ContaCorrente(...);
+        }
+    }
+
+    -> Identidade do objeto;
+        * Valor Único que os distingue de todos os outros objetos;
+            & Em java a identidade é um número inteiro;
+            & Para acessar a identidade usamos o método System.identityHashCode(c1);
+            & O operador de igualdade (==) compara identidade de dois objetos;
+              portanto, retorna true apenas se as duas variáveis têm a mesma refeência (mesmo Objetos);
+            & Existem situações que queremos comparar objetos por igualdade semântica (contúdo);
+                % Método equals(); -> igualdadeprofunda (em contúdo);
+
+    -> Pacotes.
+        dormi.
+
+    -> UML
+        * Representa os códigos por diagramas;
+        * É uma linguagem de modelagem padronizada para a especificação, visualização, construção e documentação de artefatos de sistemas
+          de software;
+        * Independente de linguagem;
+        * Unificaram as principais notações de modelagem OO;
+        * Rational Software Corporation (adquirida pela IBM em 2003);
+        * Atualmente mantida pelo OMG;
+        * Tem vários tipos de diagramas;
+            & Diagramas estruturais: representam a estrutura estática do sistema
+            & Diagramas comportamentais: representam a dinânamica do sistema;
+            & Diagrama de interação: representam a interação entre objetos;
+
+
+Ocultamento da informação:
+    * estado de um componente de software não deve ser acessível
+
+    Técnicas
+        & Encapsulamento:
+            princípio de projeto que consiste em agrupar os dados e os métodos que operam sobre
+            esses dados em uma mesma unidade de software que, no caso da oerientação a objetos é chamada de classe.
+        & Visibilidade:
+            propriedade que determina se um elemento do programa pode ser acessado, ou não, por outros elementos do programa
+
+            Preocupações:
+                * Modularização, Métodos e propriedades na mesma unidade de software
+                * Abstração. Esconder detalhes de implementação.
+                * Controle de acesso. Determinar quem pode acessar
+
+            Publicos e privados:
+                * Elementos públicos. São acessíveis por qualuqer componente do programa.
+                * Elementos privaods. São acessíveis pelo componente que os contém.
+
+        & Separar preocupações:
+            * Princípio de projeto que visa dividir um sistema de software em módulos independentes,
+            * Na prática, determina:
+                -> O que será encapsulado
+                -> O que será público
+            * Os módulos deve se procupar com apenas uma preocupação, para ter uma partição eficiente.
+
+            * Coesão. Grau de relacionamento entre os elementos de um módulo. (uma classe não deve ter muitas preocupações)
+            * Acoplamento. Grau de relacionamento entre os módulos de um sistema.
+            * Separação de preoucupações visa:
+                Alta coesão
+                Baixo acomplamento
+                Injeção de dependências
+
+            Separação proporciona:
+                Facilidade de manutenção
+                Reusabilidade
+                Testabilidade
+                Evolução e escalabilidade
+
+
+Estabilidade de interfaces públicas
+    Definição: interface pública é a parte de um módulo que é acessível por outros módulos.
+    Estabilidade de interfaces públicas é a capacidade de manter a compatibilidade entre versões
+    de um módulo, de forma que os módulos que dependem dele não precisem ser alterados
+
+
+Modificadores de acessor:
+    default: Elemento de acessível apenas dentro do pacote
+    public: Elemento acesspivel por qualuqer classe do programa.
+    protected: Elemento acesspivel pela classe e suas subclasses
+    private: apenas pela classe
+
+Métodos acessores (getters). São métodos públicos que permitem que outras classes acessem o valor de um estado interno do objeto
+
+Métodos mutadores (setters). São métodos públicos que permitem que outras classes moodifiquem o valor de um estado interno do objeto.
+
+
+Boas práticas:
+    * Pensar que objetos são projetados para fins de reúso;
+    * favorecer elementos privados; públicos apenas quando necessário
+    * favorecer uso de mutadores em acessores
+    * interfaces públicas devem ser estáveis, minimalistas, claras e vem documentadas.
+
+Classes: Tópicos avançados
+    Sobrecarga de métodos:
+        *Recursos que permite definir vários métodos com o mesmo nome.
+        *Diferenciam-se pelos tipo e/ou quantidade de parâmetros (os tipos de parâmetros que fazem diferênça).
+        *Tipo de retorno é irrelevante.
+        *Tecnicas de diferenciação:
+            numero de parametro
+            tipo de parametros
+            ordem dos parametros (para tipos diferente)
+Membros de intância:
+    Membros dos objetos em sí.
+
+    Classes estpatucas:
+        Classes que não podem ser instânciada
+        sAo usadas para organizar métodos e propriedades relacionados
+        Comumente usadas para:
+            Agrupas métodos utilitérios
+            Implementar constantes "globais"
+
+        Regras: construtor provado
+
+Relacionamento entre classes:
+    Associação: relação de uso entre classes
+    Agregação: relação de total-parte entre classe(parte pode existir sem todo);
+    Composição: lskjdflskj
+
+
+Abstração:
+    Generalização: Processo de derivar entidade mais gerais a partir de entidades mais especpificas;
+    Especialização: Contrário de Generealização, entidade mais específica a partir de entidades mais específicas;
+
+Hierarquia de tipos:
+    UML:
+        Classe mais geral fica acima;
+        Classes mais específcas ficam em baixo;
+
+Herança:
+    HERANÇA É UMA TÉCINA DE GENEREALIZAÇÃO/ESPECIALIZAÇÃO QUE CONSISTE EM DEFINIR UMA HIRARQUIA DE
+    CLASSES ONDE UMA CLASSE HERDA PROPRIEDADES E MÉTODOS DE OUTRA.
+
+    Herança deve ser bem pensada.
+
+    Para prova:
+    todo estudar for each;
+    todo estudar mais modificadores de acesso;
+    todo estudar mais inner classes e static;
+    todo revisar comparações por conteúdo e referência;
+    todo revisar cash (acho que é isso o nome, mas basicamente é aquilo de colocar um f ou d depois do número pra específicar que ele é um float ou um double)
+
+
+    Polimorfismo
+        ad-hoc: sobregarga de método (é polimorfismo pq algo com mesmo nome faz coisas diferentes.
+        paramético: métodos ou classes que podem ser usados de forma fenérica, sem específicar tipos. Programação geneérica]
+        inclusão: depende de subtipagem: objetos de classes diferentes tratados de forma linear
+
+        INCLUSÃO:
+            plimorfismo estático: resolvido em tempo de compilação;
+            polimorfismo dinâmico: resolvido em tempo de execução;
+                depende de subtipagem e ligação tardia;
+
+            subtipagem: uma subclasse é subtipo da classe (a classe é um tipo)
+            polimorfismo aproveita a subtipagem.

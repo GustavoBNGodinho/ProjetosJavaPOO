@@ -1,0 +1,25 @@
+1 - defifnir um diagrama de classes UML para os requisitos
+    * precisamos de uma classe livro.
+    * precisamos também de uma classe biblioteca
+        & Aqui podemos ver que as entidades reais desse sistema recebem classes
+PACOTE = Biblioteca
+    Classes:
+        * Livro
+            & titulo: string;
+            & autor: string;
+            & anoPublicacao: Pode ser string (se não for feito calculos), pode ser inteiro;
+            & isbn: String;
+            & emprestado: boolean;
+            -----------------------
+            Livro(titulo, autor, anoPublicacao, isbn);
+            emprestar(): void (Não retorna nada);
+            devolver(): void (Não retorna nada);
+            boolean emprestado()
+
+        *Biblioteca
+            & Livros: livro[];
+            ------------------------
+            listaEmprestados(): livro[]
+            listaDisponivel(): livro[]
+
+        *App

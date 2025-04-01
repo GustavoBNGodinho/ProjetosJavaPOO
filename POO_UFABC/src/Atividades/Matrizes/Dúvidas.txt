@@ -1,0 +1,5 @@
+1 - como eu faço uma cópia profunda de um array?
+
+2 - Eu devo usar o getCells para métodos internos da classe Matrix??
+    Ou como eles são métodos da própria classe não há necessidade de
+    utilizar o get.

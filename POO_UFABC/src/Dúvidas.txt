@@ -1,0 +1,28 @@
+Quando eu vou comparar dois dados primitivos eu estou coparando o conteúdo
+ou os endereços de momória?
+
+
+Método adiciona: Eu queria saber qual o melhor jeito de retornar corretamente o objeto.
+
+Objeto imutável;
+    * Objeto cujo estado interno não pode ser alterado após a criação.
+    * Tem apenas um estado (como se fizessemos um objeto player com apenas o estado parado)
+    * Propriedades são inicializadas no construtor;
+    * Não provê setters
+    * Exemplos: String, Integer, Double,....
+    * Objetos imutáveis são mais seguros, mais fácil de testar, mais simples matemáticamente e
+      muito útil para o paradigma declarativo (é assim que se lida com objetos, pois não ocorrem alterações)
+
+
+     * Regras
+        todas as propriedades são private ou final
+        apenas getters
+        construtor provê os valores diretamente.
+Classe Final;
+    * Classes
+    * métodos
+    * propriedades
+    * variáveis locais
+        & bloco de metodos
+        & parâmetros
+

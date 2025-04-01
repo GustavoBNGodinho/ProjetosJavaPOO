@@ -1,0 +1,14 @@
+Pacote: Data
+
+Propriedades:
+    dia: int
+    mes: int
+    ano: int
+------------------------
+Metodos:
+    Data(dia, mes ano)
+    bissexto(ano: int): boolean
+    anterior(d: Data): boolean
+    posterior(d: Data): boolean
+    converteParaString(): String
+
